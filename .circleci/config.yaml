@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: irreverentpixelfeats/ci-haskell:ubuntu_xenial-8.2.2_1.24-20180713032912-ce92597
+    steps:
+      - checkout
+      - run:
+        name: Master CI Script
+        command: bin/ci
